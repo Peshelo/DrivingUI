@@ -53,7 +53,7 @@
       const email = localStorage.email.replace('%40', '@');
       const organization = localStorage.organization_id;
       this.loading = true;
-      const URL = `http://localhost:8000/users/${email}?organization_id=${organization}`;
+      const URL = `http://app:8000/users/${email}?organization_id=${organization}`;
       await axios.get(URL,{
         headers: { "Content-Type": "application/json",
                 Authorization : 'Bearer ' + localStorage.token,

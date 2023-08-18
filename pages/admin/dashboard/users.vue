@@ -222,7 +222,7 @@ export default {
       if (Object.keys(this.errors).length === 0) {
         // make API call or submit form data here
         try {
-          await axios.post("http://localhost:8000/users",
+          await axios.post("http://app:8000/users",
               {
                 last_name: this.instructor.last_name,
                 email: this.instructor.email,
@@ -255,7 +255,7 @@ export default {
     },
     async fetchInstructor(){
     this.loading = true;
-    const URL = "http://localhost:8000/getUsers";
+    const URL = "http://app:8000/getUsers";
     const token = localStorage.token;
     await axios.get(URL, {
                 headers: { "Content-Type": "application/json",
@@ -275,7 +275,7 @@ export default {
     },
     async fetchInstructorByEmail(email){
           this.loading = true;
-    const URL = `http://localhost:8000/users/${email}`;
+    const URL = `http://app:8000/users/${email}`;
     // const token = localStorage.token;
     await axios.get(URL,{
       headers: { "Content-Type": "application/json",

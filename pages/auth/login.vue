@@ -77,7 +77,7 @@
            // Your code for handling the login form submission
            this.loading = true;
            try{
-            await axios.post('http://localhost:8000/organizations/login',{
+            await axios.post('http://app:8000/organizations/login',{
             email:this.email,
             password :this.password
             },{
