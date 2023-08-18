@@ -1,7 +1,7 @@
 <template>
   <NuxtLayout name="default" class="bg-slate-200">
     <div class="w-screen p-4 bg-blue-900 text-white">
-      <label class="text-2xl font-semibold">Upgrade Driving School</label>
+      <label class="text-2xl font-semibold">Rapiddata Driving School</label>
     </div>
     <div class="text-center">
     <h1 class="text-lg my-4">Instructor Page</h1><br>

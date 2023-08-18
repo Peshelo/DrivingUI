@@ -92,7 +92,7 @@
             </div>
           
             <div class="sticky inset-x-0 bottom-0 border-t border-gray-100 bg-white p-2">
-              <form action="/logout">
+              <div>
                 <button
                  @click="logout()"
                   type="button"
@@ -119,7 +119,7 @@
                     Logout
                   </span>
                 </button>
-              </form>
+              </div>
             </div>
           </div>
           <div class="flex-grow">
@@ -140,7 +140,12 @@ definePageMeta({
 <script>
 
 export default {
-
+methods:{
+  logout(){
+    // localStorage.clear();
+    this.$router.push("../")
+  }
+}
 }
 </script>
 

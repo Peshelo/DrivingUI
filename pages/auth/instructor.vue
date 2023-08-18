@@ -100,8 +100,7 @@
                 localStorage.token = response.data[0].access_token;
                 localStorage.setItem('organization_id', data[1])
                 localStorage.setItem('email', data[2])
-                localStorage.refresh_token = response.data[0].refresh_token;
-                
+                localStorage.setItem('refresh_token',response.data[0].refresh_token);
                 this.$router.push('../instructor/');
               }
             }).catch(error => {

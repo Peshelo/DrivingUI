@@ -68,7 +68,7 @@
              
                 this.errors = {};
                 if(!this.email){
-                    this.errors.email = "email is required";
+                    this.errors.email = "Email is required";
                 }
                 if(!this.password){
                     this.errors.password = "Enter password";

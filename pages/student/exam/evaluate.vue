@@ -6,7 +6,7 @@
 <label class="text-8xl my-4">{{this.markedTest.percentage.toFixed(2)}}%</label>
 <label class="text-xl font-semibold text-yellow-200">Time taken: 21 minutes</label>
 
-<NuxtLink to="../../instructor" class="p-2 absolute bottom-10 px-6 text-lg rounded-md bg-yellow-500 text-black">
+<NuxtLink to="../../instructor/" class="p-2 absolute bottom-10 px-6 text-lg rounded-md bg-yellow-500 text-black">
 Done
 </NuxtLink>
 </div>
