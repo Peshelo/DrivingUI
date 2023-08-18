@@ -304,7 +304,7 @@ export default {
     },
     async fetchQuestions(){
     this.loading = true;
-    const URL = "http://app:8000/questions";
+    const URL = "http://driving.rapiddata.co.zw:9058/questions";
     const token = localStorage.token;
     await axios.get(URL,{
       headers: { "Content-Type": "application/json",
@@ -353,7 +353,7 @@ export default {
         this.loading = true;
         // make API call or submit form data here
         try {
-          await axios.post("http://app:8000/questions",
+          await axios.post("http://driving.rapiddata.co.zw:9058/questions",
               data,
               {
                 headers: { "Content-Type": "multipart/form-data",
@@ -384,7 +384,7 @@ export default {
     },
     async getQuestionByID(ID){
           this.loading = true;
-    const URL = `http://app:8000/students/${ID}`;
+    const URL = `http://driving.rapiddata.co.zw:9058/students/${ID}`;
     // const token = localStorage.token;
     await axios.get(URL,{
       headers: { "Content-Type": "application/json",

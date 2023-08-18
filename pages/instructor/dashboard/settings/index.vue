@@ -118,8 +118,8 @@ import axios from 'axios';
         async getOrganization(){
       const email = localStorage.email.replace('%40', '@');
       this.loading = true;
-      const URL = "http://app:8000/getOrganisation/{email}?organization_email=info%40ring.co.zw";
-      // const URL = "http://app:8000/getOrganisation/{email}?orgianization_email=" + email;
+      const URL = "http://driving.rapiddata.co.zw:9058/getOrganisation/{email}?organization_email=info%40ring.co.zw";
+      // const URL = "http://driving.rapiddata.co.zw:9058/getOrganisation/{email}?orgianization_email=" + email;
       await axios.get(URL,{
         headers: { "Content-Type": "application/json",
                 Authorization : 'Bearer ' + localStorage.token,

@@ -211,7 +211,7 @@ export default {
       if (Object.keys(this.errors).length === 0) {
         // make API call or submit form data here
         try {
-          await axios.post("http://app:8000/students",
+          await axios.post("http://driving.rapiddata.co.zw:9058/students",
               {
                 last_name: this.student.last_name,
                 email: '',
@@ -244,7 +244,7 @@ export default {
     },
     async getAllStudent(){
     this.loading = true;
-    const URL = "http://app:8000/getStudents";
+    const URL = "http://driving.rapiddata.co.zw:9058/getStudents";
     const token = localStorage.token;
     await axios.get(URL, {
                 headers: { "Content-Type": "application/json",
@@ -264,7 +264,7 @@ export default {
     },
     async fetchStudentByID(ID){
           this.loading = true;
-    const URL = `http://app:8000/students/${ID}`;
+    const URL = `http://driving.rapiddata.co.zw:9058/students/${ID}`;
     // const token = localStorage.token;
     await axios.get(URL,{
       headers: { "Content-Type": "application/json",
@@ -301,7 +301,7 @@ export default {
       if (Object.keys(this.errors).length === 0) {
         // make API call or submit form data here
         try {
-          await axios.put("http://app:8000/update/organizations",
+          await axios.put("http://driving.rapiddata.co.zw:9058/update/organizations",
               {
                 first_name: this.student.first_name,
                 last_name: this.student.last_name,

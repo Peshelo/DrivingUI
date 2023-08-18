@@ -66,7 +66,7 @@ export default {
        // Your code for handling the login form submission
        this.loading = true;
        try{
-        await axios.get(`http://app:8000/students/${this.national_id}`,{
+        await axios.get(`http://driving.rapiddata.co.zw:9058/students/${this.national_id}`,{
             headers: {'Content-Type': 'application/json',
             Authorization : 'Bearer ' + localStorage.token,
             'Access-Control-Allow-Origin': '*'
@@ -105,7 +105,7 @@ console.log("Error:",err.message)
         },
         async getQuestions() {
         this.loading = true;
-        const URL= `http://app:8000/questions`;
+        const URL= `http://driving.rapiddata.co.zw:9058/questions`;
         await axios.get(URL, {
           headers: {
             'Content-Type': 'application/json',

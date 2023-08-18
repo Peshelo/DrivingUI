@@ -43,7 +43,7 @@ export default {
         // Your code for handling the login form submission
         this.loading = true;
         try{
-         await axios.post(`http://app:8000/evaluate?student_id=${localStorage.studentID}`,this.newArray,{
+         await axios.post(`http://driving.rapiddata.co.zw:9058/evaluate?student_id=${localStorage.studentID}`,this.newArray,{
              headers: {'Content-Type': 'application/json',
              Authorization : 'Bearer ' + localStorage.token,
              'Access-Control-Allow-Origin': '*'

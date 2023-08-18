@@ -87,7 +87,7 @@ import axios from 'axios';
                 'email':this.email,
             }
             if(this.name != null && this.address != null && this.phone != null && this.address != null && this.email != null){
-                const res = await this.$axios.put('http://app:8000/update/organizations', {org},{
+                const res = await this.$axios.put('http://driving.rapiddata.co.zw:9058/update/organizations', {org},{
         headers: { "Content-Type": "application/json",
                 Authorization : 'Bearer ' + localStorage.token,
               // 'Access-Control-Allow-Origin':'*'
@@ -108,8 +108,8 @@ import axios from 'axios';
         async getOrganization(){
       const email = localStorage.email.replace('%40', '@');
       this.loading = true;
-      const URL = `http://app:8000/getOrganisation/{email}?organization_email=${email}`;
-      // const URL = "http://app:8000/getOrganisation/{email}?orgianization_email=" + email;
+      const URL = `http://driving.rapiddata.co.zw:9058/getOrganisation/{email}?organization_email=${email}`;
+      // const URL = "http://driving.rapiddata.co.zw:9058/getOrganisation/{email}?orgianization_email=" + email;
       await axios.get(URL,{
         headers: { "Content-Type": "application/json",
                 Authorization : 'Bearer ' + localStorage.token,
@@ -145,7 +145,7 @@ import axios from 'axios';
       if (Object.keys(this.errors).length === 0) {
         // make API call or submit form data here
         try {
-          await axios.put("http://app:8000/update/organizations",
+          await axios.put("http://driving.rapiddata.co.zw:9058/update/organizations",
               {
                 name: this.user.name,
                 email: this.user.email,
