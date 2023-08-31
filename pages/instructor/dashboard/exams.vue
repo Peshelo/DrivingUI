@@ -280,7 +280,7 @@ export default {
 
       if (this.questionFilter) {
         filteredItems = filteredItems.filter((items) =>
-          items.email.toLowerCase().includes(this.questionFilter.toLowerCase())
+          items.question.toLowerCase().includes(this.questionFilter.toLowerCase())
         );
       }
 
