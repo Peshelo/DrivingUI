@@ -13,13 +13,20 @@
     <button class="absolute bottom-4 left-4 w-fit  bg-gray-700 p-2 px-3 text-lg font-lg rounded-lg text-white text-center">Admin</button>
     </NuxtLayout>
 </template>
+
+
+<script setup>
+definePageMeta({
+  middleware: 'auth'
+})
+</script>
   <script>
   export default {
-    beforeMount(){
-    if(!localStorage.getItem('token')){
-      this.$router.push('./auth/login');
-    }
-  }
+  //   beforeMount(){
+  //   if(!localStorage.getItem('token')){
+  //     this.$router.push('./auth/login');
+  //   }
+  // }
   }
   </script>
   

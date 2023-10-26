@@ -6,8 +6,12 @@
         </div>
     
         <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
+          <p v-if="errors.network" class="p-2 my-2 text-xs bg-red-100 border border-red-500  rounded text-red-500">{{ this.errors.network }}</p>
+
           <div class="bg-white border py-4 px-4 shadow sm:rounded-lg sm:px-10">
+
             <p v-if="loading" class="text-center">Loading...</p>
+
             <form v-else @submit.prevent="handleSubmit()" class="space-y-4 m-4 w-[300px]">
               <div>
                 <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
@@ -47,6 +51,12 @@
     </NuxtLayout>
     </template>
     
+
+    <script setup>
+    definePageMeta({
+      middleware:'auth'
+    })
+  </script>
     
     <script>
     import axios from 'axios'
@@ -110,6 +120,7 @@
             }).catch(error => {
             console.log(error)
             this.errored = true
+            this.errors.network = "Network Error :( Could not send request"
             
           }).finally(() => this.loading = false);
     

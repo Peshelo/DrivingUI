@@ -61,7 +61,7 @@ export default {
     await axios.get(URL,{
       headers: { "Content-Type": "application/json",
               Authorization : 'Bearer ' + localStorage.token,
-            // 'Access-Control-Allow-Origin':'*'
+            'Access-Control-Allow-Origin':'*'
            },
     }).then((res) =>
      {

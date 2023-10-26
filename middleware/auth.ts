@@ -15,7 +15,9 @@ export default defineNuxtRouteMiddleware((to, from) => {
     //     })
     //   );
 
-    console.log(to);
-    console.log(from);
+
+    // console.log(localStorage.getItem('token'))
+    // console.log(to);
+    // console.log(from);
 
 })
