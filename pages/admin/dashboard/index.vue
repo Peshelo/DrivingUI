@@ -1,12 +1,12 @@
 <template>
-  <NuxtLayout name="admin">
+  <NuxtLayout name="admin" class="bg-gray-100">
    <div class="flex justify-between bg-green-900 px-10 py-3">
      <p class="text-white font-semibold text-lg">Dashboard</p>
      <modal />
    </div>
    <div class="grid gap-6 lg:grid-cols-3 sm-grid-cols-2 py-4 px-5">
       <!-- Grid starts here -->
-      <div class="flex items-center bg-blue-500 rounded shadow-sm justify-between p-5">
+      <NuxtLink to="./users" class="flex drop-shadow-lg items-center bg-blue-500 rounded-lg border-4 hover:border-blue-700 duration-150 justify-between p-5">
           <div>
               <div class="text-sm text-gray-50">Instructors</div>
           <div class="flex items-center pt-1">
@@ -18,8 +18,8 @@
                     <path stroke-linecap="round" stroke-linejoin="round" d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
               </div>
-      </div>
-      <div class="flex items-center bg-red-500 rounded shadow-sm justify-between p-5">
+      </NuxtLink>
+      <div class="flex drop-shadow-lg items-center bg-red-500 rounded-lg border-4 duration-150 border-transparent hover:border-red-700 justify-between p-5">
           <div>
               <div class="text-sm text-gray-50">Students</div>
           <div class="flex items-center pt-1">
@@ -32,7 +32,7 @@
                   </svg>
               </div>
       </div>  
-      <div class="flex items-center bg-green-600 rounded shadow-sm justify-between p-5">
+      <div class="flex drop-shadow-lg items-center bg-green-600 rounded-lg border-4 duration-150 hover:border-green-700 hover:drop-shadow-none justify-between p-5">
         <div>
             <div class="text-sm text-gray-50">Questions</div>
         <div class="flex items-center pt-1">
@@ -113,7 +113,9 @@ export default {
   methods: {
     async getOrganization(){
     const email = localStorage.email.replace('%40', '@');
+    // const email = localStorage.getItem("email");
     this.loading = true;
+    console.log("Organization Email: ",email);
     const URL = `http://driving.rapiddata.co.zw:9058/getOrganisation/{email}?organization_email=${email}`;
     // const URL = "http://driving.rapiddata.co.zw:9058/getOrganisation/{email}?orgianization_email=" + email;
     await axios.get(URL,{

@@ -110,9 +110,9 @@
                 console.log("Login Successful..")
                 localStorage.setItem('email',this.email);
                 // localStorage.removeItem(token);
-                localStorage.token = response.data.access_token;
+                localStorage.setItem("token",response.data.access_token);
 
-                localStorage.refresh_token = response.data.refresh_token;
+                localStorage.setItem("refresh_token",response.data.refresh_token);
 
           
                this.$router.push('../')
