@@ -177,9 +177,7 @@ export default {
         first_name: '',
         email: '',
       },
-      item: [
-      
-      ],
+      item: [],
     };
   },
   computed: {
